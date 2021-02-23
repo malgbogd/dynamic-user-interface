@@ -1,0 +1,180 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  background-color: #c29f92;
+  color: #624d62;
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  margin-top: 8px;
+}
+
+#screen {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  width: 310px;
+  min-height: 540px;
+  border: 2px solid;
+  border-radius: 18px;
+  margin-bottom: 8px;
+  background-color: #c7c7c7;
+}
+
+.footer {
+  display: block;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #c2b0e0;
+  color: #54544f;
+  height: 20px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+#content {
+  min-height: 100%;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 auto;
+}
+
+#navBar {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  background-color: #624d62;
+  border-radius: 15px 15px 0 0;
+}
+
+.menu {
+  text-align: center;
+  flex-grow: 1;
+  color: #f5b89d;
+  padding: 8px;
+}
+
+.menu:hover {
+  color: #c7c7c7;
+}
+
+.hiddenMenu {
+  z-index: 1;
+  background-color: #f9f9f9;
+  color: #624d62;
+  padding: 5px;
+}
+
+.hiddenMenu:hover {
+  background-color: #f5b89d;
+}
+
+.showMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 85px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transition: opacity 300ms linear 0s;
+  opacity: 100%;
+}
+
+.hideMenu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 85px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  transition: opacity 300ms linear 0s;
+  opacity: 0%;
+}
+
+.navigationBox {
+  display: block;
+  position: absolute;
+  top: 50%;
+  width: 310px;
+  background-color: transparent;
+}
+
+.naviDiv {
+  display: flex;
+  justify-content: space-between;
+  background-color: transparent;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  padding: 15px;
+  z-index: 3;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: #f9f9f9;
+  opacity: 50%;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+  z-index: 2;
+}
+
+.dot:hover,
+.activeDot {
+  background-color: #717171;
+}
+
+.dotBox {
+  display: block;
+  position: absolute;
+  bottom: 26%;
+  width: 310px;
+}
+
+.dotBox {
+  display: flex;
+  justify-content: center;
+}
+
+.imgBox {
+  display: block;
+  position: absolute;
+  top: 38%;
+  width: 310px;
+  height: 30%;
+}
+
+.imgDiv {
+  display: flex;
+  justify-content: center;
+  border: 5px solid #838383;
+}
+
+img {
+  width: 0;
+  height: 190px;
+  z-index: 1;
+  opacity: 0%;
+  transition: opacity 200ms ease-in-out 0s;
+}
+
+.activeImg {
+  width: 300px;
+  opacity: 100%;
+}
